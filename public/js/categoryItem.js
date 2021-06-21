@@ -21,13 +21,19 @@ function itemData(){
 }
 
 async function getItemData(itemId){
+  if(!itemId){
+    return;
+  }
   const response = await fetch('/api/item/' + itemId);
   const data = await response.json();
 
   for (item of data) {
     const root = document.createElement('div');
+
+    const text = document.createElement('div');
     const name = document.createElement('h3');
     const desc = document.createElement('p');
+
     const pageLink = document.createElement('a');
     const image = document.createElement('img');
 
@@ -38,11 +44,13 @@ async function getItemData(itemId){
     pageLink.href = '/item/' + item.name;
 
     image.src = '/images/' + item.imgName + '.png';
-    image.width = 200;
 
+    root.className = "contentBox";
+
+    text.append(name, desc);
     pageLink.append(root);
-    root.append(name, desc, image);
+    root.append(text, image);
     
-    document.body.append(pageLink);
+    document.getElementById("content").append(pageLink);
   }
 }
