@@ -2,6 +2,7 @@ var image64;
 const submitIten = document.getElementById('submitItem');
 const submitCategory = document.getElementById('submitCategory');
 
+
 submitIten.addEventListener('click', async event => {
 
     const name = document.getElementById('itemName').value;
@@ -22,7 +23,6 @@ submitIten.addEventListener('click', async event => {
     const json = await response.json();
     console.log(json);
 });
-
 
 
 submitCategory.addEventListener('click', async event => {

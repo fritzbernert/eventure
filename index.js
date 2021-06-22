@@ -53,22 +53,40 @@ app.get('/api/item/:id', (request, response) => {
   });
 });
 
+app.get('/api/password', (request, response) => {
+  response.json({pwd: '1806'});
+});
+
 
 //db post
 app.post('/api/item', (request, response) => {
   const data = request.body;
   const timestamp = Date.now();
   data.timestamp = timestamp;
-  itemDB.insert(data);
-  response.json(data);
+
+  itemDB.update({ name: data.name }, { $set: data }, { upsert: true }, function (err) {
+    if (err) {
+      response.end();
+      return;
+    }
+    response.json(data);
+  });
+
   console.log(data);
 });
 app.post('/api/category', (request, response) => {
     const data = request.body;
     const timestamp = Date.now();
     data.timestamp = timestamp;
-    categoryDB.insert(data);
-    response.json(data);
+
+    categoryDB.update({ name: data.name }, { $set: data }, { upsert: true }, function (err) {
+      if (err) {
+        response.end();
+        return;
+      }
+      response.json(data);
+    });
+
     console.log(data);
 });
 
@@ -94,9 +112,10 @@ app.get('/category', function(req, res){
 });
 
 //create items/categorys
-app.get('/create', function(req, res){
+app.get('/create/Q8Net9T35T1Jb8hU0KIEfR7l5/nIjQYsSXQUBtqeluI=', function(req, res){
   res.sendFile(path.join(__dirname+'/public/page/create.html'));
 });
+
 
 
 //dynamic pages

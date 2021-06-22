@@ -1,8 +1,11 @@
 getData();
+var counter = 0;
 
 async function getData() {
+
   const response = await fetch('/api/item');
   const data = await response.json();
+
 
   for (item of data) {
     const root = document.createElement('div');
@@ -30,5 +33,8 @@ async function getData() {
     root.append(text, image);
     
     document.getElementById("content").append(pageLink);
+
+    counter++; 
   }
+  document.getElementById("counter").innerHTML = counter;
 }

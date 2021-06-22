@@ -29,6 +29,6 @@ async function getData() {
     root.append(text, image);
     
 
-    document.getElementById("content").append(link);
+    document.getElementById("categoryContent").append(link);
   }
 }

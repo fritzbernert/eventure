@@ -6,12 +6,12 @@ body{
 }
 
 div{
-    padding: 1%;
-    margin: 1%;
+    padding: 5px;
+    margin: 5px;
     border-radius: 5px;
 }
 
-#content{
+.content{
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr; 
@@ -39,9 +39,24 @@ div{
     object-fit: cover;
 }
 
+.headBlog{
+    background-color: #EEEEEE;
+    margin: 15px;
+    padding: 30px;
+    font-weight: bold;
+}
+
 nav{
     background-color: #EEEEEE;
     width: 100%;
+}
+
+hr{
+    margin: 15px;
+    margin-bottom: 50px;
+}
+h3{
+    margin: 15px;
 }
 
 footer {

@@ -1,5 +1,5 @@
 var id = document.getElementById("name").innerHTML;
-
+var counter = 0;
 var data;
 
 const getData = async () => {
@@ -52,5 +52,8 @@ async function getItemData(itemId){
     root.append(text, image);
     
     document.getElementById("content").append(pageLink);
+
+    counter++;
   }
+  document.getElementById("counter").innerHTML = counter;
 }
