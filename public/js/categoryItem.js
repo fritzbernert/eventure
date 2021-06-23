@@ -44,6 +44,7 @@ async function getItemData(itemId){
     pageLink.href = '/item/' + item.name;
 
     image.src = '/images/' + item.imgName + '.png';
+    image.className = 'flex-auto d-none d-md-block';
 
     root.className = "contentBox";
 

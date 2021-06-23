@@ -45,37 +45,37 @@ async function getItemData() {
 
   for (let i = 0; i < 4; i++) {
     var rand = Math.floor(Math.random() * data.length);
-    if(randoms.includes(rand)){
-      return;
+    if(!randoms.includes(rand)){
+      randoms.push(rand);
+
+      const root = document.createElement('div');
+
+      const text = document.createElement('div');
+      const name = document.createElement('h3');
+      const desc = document.createElement('p');
+
+      const pageLink = document.createElement('a');
+      const image = document.createElement('img');
+
+      data[rand].name = data[rand].name.replace('_', ' ');
+      name.textContent = data[rand].name;
+      desc.textContent = data[rand].desc;
+
+      pageLink.href = '/item/' + data[rand].name;
+
+      image.src = '/images/' + data[rand].imgName + '.png';
+      image.className = 'flex-auto d-none d-md-block';
+
+      root.className = "contentBox";
+
+      text.append(name, desc);
+      pageLink.append(root);
+      root.append(text, image);
+      
+      document.getElementById("recommendedContent").append(pageLink);
+    }else{
+      i--;
     }
-    randoms.push(rand);
-
-    const root = document.createElement('div');
-
-    const text = document.createElement('div');
-    const name = document.createElement('h3');
-    const desc = document.createElement('p');
-
-    const pageLink = document.createElement('a');
-    const image = document.createElement('img');
-
-    data[rand].name = data[rand].name.replace('_', ' ');
-    name.textContent = data[rand].name;
-    desc.textContent = data[rand].desc;
-
-    pageLink.href = '/item/' + data[rand].name;
-
-    image.src = '/images/' + data[rand].imgName + '.png';
-    image.className = 'flex-auto d-none d-md-block';
-
-    root.className = "contentBox";
-
-    text.append(name, desc);
-    pageLink.append(root);
-    root.append(text, image);
-    
-    document.getElementById("recommendedContent").append(pageLink);
-
   }
 
 }
