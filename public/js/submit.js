@@ -24,6 +24,31 @@ submitItem.addEventListener('click', async event => {
     console.log(json);
 });
 
+submitItem.addEventListener('click', async event => {
+  const name = document.getElementById('itemName').value;
+
+  var category = document.getElementById('itemCategory').value;
+  category = category.split(',');
+  console.log(category);
+
+  
+  for(item of category){
+    console.log(item);
+    const data = {item, name};
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    };
+    const response = await fetch('/api/category/addItem', options);
+    const json = await response.json(); 
+    //console.log(json);     
+  }
+});
+
 
 submitCategory.addEventListener('click', async event => {
 

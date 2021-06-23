@@ -89,7 +89,19 @@ app.post('/api/category', (request, response) => {
 
     console.log(data);
 });
+app.post('/api/category/addItem', (request, response) => {
+  const data = request.body;
 
+  categoryDB.update({ name: data.item }, { $push: { items: data.name } }, {}, function (err) {
+    if (err) {
+      response.end();
+      return;
+    }
+    response.json(data);
+  });
+
+  console.log(data);
+});
 
 
 
