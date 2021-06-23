@@ -112,7 +112,7 @@ app.get('/category', function(req, res){
 });
 
 //create items/categorys
-app.get('/create/Q8Net9T35T1Jb8hU0KIEfR7l5/nIjQYsSXQUBtqeluI=', function(req, res){
+app.get('/create', function(req, res){
   res.sendFile(path.join(__dirname+'/public/page/create.html'));
 });
 

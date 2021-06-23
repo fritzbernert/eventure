@@ -38,6 +38,12 @@ div{
     padding: 0;
     object-fit: cover;
 }
+.contentBox p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
 .headBlog{
     background-color: #EEEEEE;
@@ -77,3 +83,15 @@ a:hover{
     color: #1e2024;
     text-decoration: none;
 }
+
+
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-auto {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+  }

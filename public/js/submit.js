@@ -1,9 +1,9 @@
 var image64;
-const submitIten = document.getElementById('submitItem');
+const submitItem = document.getElementById('submitItem');
 const submitCategory = document.getElementById('submitCategory');
 
 
-submitIten.addEventListener('click', async event => {
+submitItem.addEventListener('click', async event => {
 
     const name = document.getElementById('itemName').value;
     const imgName = document.getElementById('itemImgName').value;

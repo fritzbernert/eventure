@@ -32,7 +32,7 @@ async function getData() {
     pageLink.append(root);
     root.append(text, image);
     
-    document.getElementById("content").append(pageLink);
+    document.getElementById("itemContent").append(pageLink);
 
     counter++; 
   }

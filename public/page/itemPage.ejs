@@ -17,16 +17,16 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="../">Eventure</a>
   
-          <div class="collapse navbar-collapse">
+          <div class="navbar-collapse">
             <ul class="navbar-nav me-auto mb-2">
               <li class="nav-item">
                 <a class="nav-link" href="../">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="../category">Categorys</a>
+                <a class="nav-link" href="../category">Categorys</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../item">Items</a>
+                <a class="nav-link active" href="../item">Items</a>
               </li>
             </ul>
           </div>
@@ -37,7 +37,8 @@
         <h2><%= name %></h2>
         <p><%= description %></p>
         <img src="../images/<%= imgName %>.png" alt="brand logo" width =200>
-        <a href="https://<%= link %>">Link</a>
+        <br>
+        <a class="btn btn-primary" href="https://<%= link %>">Link</a>
     </div>
     
 

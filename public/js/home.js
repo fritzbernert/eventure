@@ -21,7 +21,7 @@ async function getCategoryData() {
     link.href = '/category/' + item.name;
 
     image.src = '/images/' + item.imgName + '.png';
-    image.width = 200;
+    image.className = 'flex-auto d-none d-md-block';
 
     root.className = "contentBox";
 
@@ -46,7 +46,7 @@ async function getItemData() {
   for (let i = 0; i < 4; i++) {
     var rand = Math.floor(Math.random() * data.length);
     if(randoms.includes(rand)){
-      i--;
+      return;
     }
     randoms.push(rand);
 
@@ -66,6 +66,7 @@ async function getItemData() {
     pageLink.href = '/item/' + data[rand].name;
 
     image.src = '/images/' + data[rand].imgName + '.png';
+    image.className = 'flex-auto d-none d-md-block';
 
     root.className = "contentBox";
 
