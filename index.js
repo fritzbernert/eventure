@@ -128,6 +128,11 @@ app.get('/create', function(req, res){
   res.sendFile(path.join(__dirname+'/public/page/create.html'));
 });
 
+//affiliate items
+app.get('/redir/:id', function(req, res){
+  const id = req.params.id;
+  res.redirect("https://www.digistore24.com/redir/" + id + "/FritzBernert/")
+});
 
 
 //dynamic pages
@@ -147,7 +152,7 @@ app.get('/item/:id', function(req, res){
         resData = data[0];
 
         res.render("itemPage", 
-          { name: resData.name, 
+          { name: resData.name.replaceAll('_', ' '), 
             description: resData.desc, 
             imgName: resData.imgName, 
             link: resData.link

@@ -17,8 +17,7 @@ async function getData() {
     const pageLink = document.createElement('a');
     const image = document.createElement('img');
 
-    item.name = item.name.replace('_', ' ');
-    name.textContent = item.name;
+    name.textContent = item.name.replaceAll('_', ' ');
     desc.textContent = item.desc;
 
     pageLink.href = '/item/' + item.name;
