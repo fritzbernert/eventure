@@ -1,5 +1,5 @@
 body{
-    background-color: #F4F9F4;
+    background-color: #fffcf6;
     color: #393E46;
 
     margin: 0 1% 0 1%;
@@ -24,7 +24,6 @@ div{
 
 .contentBox{
     background-color: #EEEEEE;
-
     height: 200px;
 
     display: grid; 
@@ -40,6 +39,7 @@ div{
     padding: 0;
     object-fit: cover;
     vertical-align: middle;
+    border-radius: 5px;
 }
 .contentBox p{
     overflow: hidden;
@@ -62,6 +62,8 @@ div{
 nav{
     background-color: #EEEEEE;
     width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 hr{
