@@ -64,10 +64,10 @@ function changeView(){
   var button = document.getElementById("viewChange");
   if(listView){
     listView = false;
-    button.innerHTML = "List";
+    button.innerHTML = "&#xE8EF;";
   }else{
     listView = true;
-    button.innerHTML = "Block";
+    button.innerHTML = "&#xE9B0";
   }
 
   getData();

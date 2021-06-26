@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico">
 
     <link rel="stylesheet" href="../css/style.css">
@@ -35,19 +36,22 @@
     </nav>
     
     <div class="itemBlock">
-      <h2><%= name %></h2>
+      <span class="title"><%= name %></span>
       <div class="content">
         <p style="white-space: pre-line"><%= description %></p>
 
         <div>
           <img src="../images/<%= imgName %>.png" alt="brand logo" width =200>
           <br>
-          <a class="btn btn-secondary" href="<%= link %>" target="_blank" rel="noopener noreferrer">Link</a>
+          <a class="btn btn-secondary" href="<%= link %>" target="_blank" rel="noopener noreferrer">
+            <span style="vertical-align: middle;" class="material-icons">&#xE157;</span> 
+            <%= name %>
+          </a>
         </div>
       </div>
     </div>
 
-    <h3>Recommended</h3>
+    <span class="title">Recommended</span>
     <div id="recommendedContent" class="content" ></div>
 
     <footer>

@@ -11,6 +11,7 @@ div{
     border-radius: 5px;
 }
 
+
 .content{
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -57,6 +58,7 @@ div{
     font-weight: bold;
 }
 
+
 .itemBlock{
     border-radius: 5px;
     background-color: #EEEEEE;
@@ -102,6 +104,17 @@ div{
     margin: 10px;
     margin-left: auto;
 
+}
+
+.title{
+    width: fit-content;
+    margin: 15px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#viewChange{
+    margin: 0 15px;
 }
 
 .headBlog{

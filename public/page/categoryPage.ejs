@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico">
 
     <link rel="stylesheet" href="../css/style.css">
@@ -36,9 +37,10 @@
     </nav>
 
     <div>
-      <h2 id="name"><%= name %></h2>
+      <span id="name" class="title"><%= name %></span>
       <span>(<span id="counter"></span>)</span>
-      <a class="btn btn-secondary btn-sm" id="viewChange" onclick="changeView()">List</a>
+      <br>
+      <span class="btn btn-outline-dark btn-sm material-icons" id="viewChange" onclick="changeView()">&#xE8EF;</span>
     </div>
 
     <div id="content" class="content"></div>
