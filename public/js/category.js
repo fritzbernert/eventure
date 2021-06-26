@@ -9,13 +9,16 @@ async function getData() {
     const link = document.createElement('a');
 
     const text = document.createElement('div');
-    const name = document.createElement('h3');
+    const name = document.createElement('span');
+    const count = document.createElement('p');
     const desc = document.createElement('p');
     
     const image = document.createElement('img');
 
     name.textContent = item.name.replace('_', ' ');
     desc.textContent = item.desc;
+
+    count.textContent = "(" + item.items.length + ")";
 
     link.href = '/category/' + item.name;
 
@@ -25,7 +28,7 @@ async function getData() {
     root.className = "contentBox";
 
 
-    text.append(name, desc);
+    text.append(name, count, desc);
     link.append(root);
     root.append(text, image);
     

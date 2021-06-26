@@ -43,9 +43,12 @@ div{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.contentBox h3{
+.contentBox span{
     font-size: 30px;
     margin-left: 0;
+}
+.listItem{
+    padding: 5px;
 }
 
 .headBlog{

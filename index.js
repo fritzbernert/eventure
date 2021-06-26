@@ -184,7 +184,7 @@ app.get('/category/:id', function(req, res){
 
         res.render("categoryPage", 
           { title: resData.name, 
-            name: resData.name, 
+            name: resData.name.replaceAll('_',' '), 
             imgName: resData.imgName, 
             description:resData.desc 
           });
