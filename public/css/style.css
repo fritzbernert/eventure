@@ -11,7 +11,6 @@ div{
     border-radius: 5px;
 }
 
-
 .content{
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -58,6 +57,53 @@ div{
     font-weight: bold;
 }
 
+.itemBlock{
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 50px;
+
+    padding: 30px;
+}
+.itemBlock .content{
+    display: grid; 
+    grid-template-columns: 1.2fr 0.8fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."; 
+}
+.itemBlock h2{
+    font-size: 40px;
+    margin-left: 0;
+    font-weight: bold;
+}
+.itemBlock p{
+    width: 80%;
+
+    margin-top: 20px;
+    font-size: 20px;
+}
+.itemBlock img{
+    height: auto;
+    width: 80%;
+
+    display: block;
+    margin-right: 10px;
+    margin-left: auto;
+
+    border-radius: 5px;
+}
+.itemBlock a{ 
+    width: 80%;
+
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+
+}
+
 .headBlog{
     background-color: #EEEEEE;
     margin: 15px;
@@ -87,6 +133,7 @@ footer {
     padding: 15px;
     background-color: #EEEEEE;
     text-align: center;
+    margin-top: 20px;
 }
 
 a{
@@ -98,14 +145,13 @@ a:hover{
     text-decoration: none;
 }
 
-
 .card-img-right {
     height: 100%;
     border-radius: 0 3px 3px 0;
-  }
+}
   
-  .flex-auto {
+.flex-auto {
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
-  }
+}

@@ -1,5 +1,5 @@
 getCategoryData();
-getItemData();
+//getItemData();
 
 async function getCategoryData() {
   const response = await fetch('/api/category');
@@ -38,7 +38,7 @@ async function getCategoryData() {
 }
 
 
-
+/*
 async function getItemData() {
 
   const response = await fetch('/api/item');
@@ -80,4 +80,4 @@ async function getItemData() {
     }
   }
 
-}
+}*/

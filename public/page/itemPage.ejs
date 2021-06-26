@@ -34,14 +34,26 @@
         </div>
     </nav>
     
-    <div>
-        <h2><%= name %></h2>
+    <div class="itemBlock">
+      <h2><%= name %></h2>
+      <div class="content">
         <p style="white-space: pre-line"><%= description %></p>
-        <img src="../images/<%= imgName %>.png" alt="brand logo" width =200>
-        <br>
-        <a class="btn btn-secondary" href="<%= link %>" target="_blank" rel="noopener noreferrer">Link</a>
+
+        <div>
+          <img src="../images/<%= imgName %>.png" alt="brand logo" width =200>
+          <br>
+          <a class="btn btn-secondary" href="<%= link %>" target="_blank" rel="noopener noreferrer">Link</a>
+        </div>
+      </div>
     </div>
 
-    
+    <h3>Recommended</h3>
+    <div id="recommendedContent" class="content" ></div>
+
+    <footer>
+      © Eventure 2021
+    </footer>
+
+    <script src="../js/recommended.js"></script>
 </body>
 </html>
