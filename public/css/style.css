@@ -130,6 +130,16 @@ nav{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+nav .nav-link{
+    font-size: 22px;
+}
+nav .active{
+    font-weight: 450;
+}
+nav .navbar-brand{
+    font-weight: 500;
+    font-size: 30px;
+}
 
 hr{
     margin: 15px;
