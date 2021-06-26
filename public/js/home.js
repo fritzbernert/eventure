@@ -57,8 +57,7 @@ async function getItemData() {
       const pageLink = document.createElement('a');
       const image = document.createElement('img');
 
-      data[rand].name = data[rand].name.replace('_', ' ');
-      name.textContent = data[rand].name;
+      name.textContent = data[rand].name.replaceAll('_', ' ');
       desc.textContent = data[rand].desc;
 
       pageLink.href = '/item/' + data[rand].name;

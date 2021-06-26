@@ -151,6 +151,10 @@ app.get('/item/:id', function(req, res){
         }
         resData = data[0];
 
+        if(!resData.link.includes("/redir/")){
+          resData.link = path.join('https://'+resData.link);
+        }
+
         res.render("itemPage", 
           { name: resData.name.replaceAll('_', ' '), 
             description: resData.desc, 
