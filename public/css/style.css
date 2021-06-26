@@ -11,7 +11,6 @@ div{
     border-radius: 5px;
 }
 
-
 .content{
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -31,6 +30,11 @@ div{
     gap: 0px 0px; 
     grid-template-areas: 
         ". ."; 
+}
+.contentBox .imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contentBox img{
     width: 100%;
@@ -171,10 +175,57 @@ a:hover{
 .card-img-right {
     height: 100%;
     border-radius: 0 3px 3px 0;
-}
-  
+} 
 .flex-auto {
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    nav{
+        background-color: #EEEEEE;
+
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .content{
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "."; 
+    }
+    .contentBox span{
+        font-size: 25px;
+        margin-left: 0;
+        font-weight: bold;
+    }
+
+    .itemBlock .content{
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "."; 
+    }
+    .itemBlock img{
+        height: auto;
+        width: 80%;
+    
+        display: block;
+        margin: auto;
+    
+        border-radius: 5px;
+    }
+    .itemBlock a{ 
+        width: 80%;
+    
+        display: block;
+        margin: auto;
+    }
 }

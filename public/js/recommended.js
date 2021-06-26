@@ -20,6 +20,7 @@ async function getItemData(count) {
   
         const pageLink = document.createElement('a');
         const image = document.createElement('img');
+        const imageContainer = document.createElement('div');
   
         name.textContent = data[rand].name.replaceAll('_', ' ');
         desc.textContent = data[rand].desc;
@@ -30,10 +31,12 @@ async function getItemData(count) {
         image.className = 'flex-auto d-none d-md-block';
   
         root.className = "contentBox";
+        imageContainer.className = "imgContainer";
   
+        imageContainer.append(image);
         text.append(name, desc);
         pageLink.append(root);
-        root.append(text, image);
+        root.append(text, imageContainer);
         
         document.getElementById("recommendedContent").append(pageLink);
       }else{

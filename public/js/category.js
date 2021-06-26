@@ -14,6 +14,7 @@ async function getData() {
     const desc = document.createElement('p');
     
     const image = document.createElement('img');
+    const imageContainer = document.createElement('div');
 
     name.textContent = item.name.replace('_', ' ');
     desc.textContent = item.desc;
@@ -26,11 +27,12 @@ async function getData() {
     image.className = 'flex-auto d-none d-md-block';
 
     root.className = "contentBox";
+    imageContainer.className = "imgContainer";
 
-
+    imageContainer.append(image);
     text.append(name, count, desc);
     link.append(root);
-    root.append(text, image);
+    root.append(text, imageContainer);
     
 
     document.getElementById("categoryContent").append(link);
