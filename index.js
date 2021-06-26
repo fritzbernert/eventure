@@ -124,7 +124,7 @@ app.get('/category', function(req, res){
 });
 
 //create items/categorys
-app.get('/create', function(req, res){
+app.get('/create/D2jZnBKWxv8ig4Ti', function(req, res){
   res.sendFile(path.join(__dirname+'/public/page/create.html'));
 });
 
