@@ -246,3 +246,23 @@ a:hover{
         margin: auto;
     }
 }
+
+
+
+.darkmode .contentBox, .darkmode .listItem, .darkmode .headBlog, .darkmode nav, .darkmode .itemBlock, .darkmode footer{
+    background-color: #494949;
+    color: #EEEEEE;
+}
+
+body.darkmode{
+    background-color: #3a3a3a;
+    color: #EEEEEE;
+}
+
+.darkmode a{
+    color: #EEEEEE ;
+}
+
+.darkmode a:hover{
+    color: #a7a7a7;
+}

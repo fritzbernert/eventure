@@ -16,7 +16,7 @@ async function getData() {
     const image = document.createElement('img');
     const imageContainer = document.createElement('div');
 
-    name.textContent = item.name.replace('_', ' ');
+    name.textContent = item.name.replaceAll('_', ' ');
     desc.textContent = item.desc;
 
     count.textContent = "(" + item.items.length + ")";
