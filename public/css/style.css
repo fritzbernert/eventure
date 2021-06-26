@@ -199,8 +199,25 @@ a:hover{
         grid-template-areas: 
         "."; 
     }
+    .contentBox{
+        background-color: #EEEEEE;
+        height: 200px;
+    
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "."; 
+    }
+    .contentBox p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
     .contentBox span{
-        font-size: 25px;
+        font-size: 20px;
         margin-left: 0;
         font-weight: bold;
     }
