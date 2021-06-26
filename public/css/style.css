@@ -46,9 +46,16 @@ div{
 .contentBox span{
     font-size: 30px;
     margin-left: 0;
+    font-weight: bold;
 }
 .listItem{
-    padding: 5px;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+}
+.listItem span{
+    font-weight: bold;
 }
 
 .headBlog{
