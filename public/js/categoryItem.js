@@ -42,6 +42,7 @@ async function getItemData(itemId){
 
       const pageLink = document.createElement('a');
       const image = document.createElement('img');
+      const imageContainer = document.createElement('div');
 
       name.textContent = item.name.replaceAll('_', ' ');
       desc.textContent = item.desc;
@@ -52,10 +53,12 @@ async function getItemData(itemId){
       image.className = 'flex-auto d-none d-md-block';
 
       root.className = "contentBox";
+      imageContainer.className = "imgContainer";
 
+      imageContainer.append(image);
       text.append(name, desc);
       pageLink.append(root);
-      root.append(text, image);
+      root.append(text, imageContainer);
       
       document.getElementById("content").append(pageLink);
     }else{
