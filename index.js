@@ -134,6 +134,11 @@ app.get('/redir/:id', function(req, res){
   res.redirect("https://www.digistore24.com/redir/" + id + "/FritzBernert/")
 });
 
+//sitemap
+app.get('/sitemap', function(req, res){
+  res.sendFile(path.join(__dirname+'/sitemap.xml'));
+});
+
 
 //dynamic pages
 //specific page
