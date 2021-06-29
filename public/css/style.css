@@ -152,6 +152,10 @@ hr{
 h3{
     margin: 15px;
 }
+.description{
+    margin: 15px;
+    width: 70%;
+}
 
 footer {
     position: absolute;
