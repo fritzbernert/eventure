@@ -53,10 +53,16 @@
         <p>Find the best websites, courses, tools and resources to build a side hustle. 
           From doing simple tasks and surveys to building a successful e commerce business. 
           Everything on <span style=font-size:20px;>Eventure</span>!
+          <br>
+          <div>
+            <h4>Join our newsletter for weekly updates!</h4>   
+            <button id="emailSubscribeButton" class="btn btn-success">Join</button> 
+          </div>
         </p>    
       </div>
 
       <hr>
+
 
       <span class="title">Recommended</span>
       <div id="recommendedContent" class="content" on="getItemData(4)"></div>
@@ -69,11 +75,102 @@
       
     </div>
 
+
+    <div id="emailSubscribeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-form">
+          <form action="#" id="emailSubscribe">
+            <h3>Join our newsletter</h3>
+            <p>Enter your email to recieve a weekly newsletter with new additions, great offers and other interesting news!</p>
+            <input type="email" name="" id="emailInput" placeholder="Your email..." required><br>
+            <input class="btn btn-success" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+
     <footer>
       © Eventure 2021
     </footer>
 
     <script src="../js/category.js"></script>
     <script src="../js/recommended.js"></script>
+    <script>
+      var emailSubscribeModal = document.getElementById("emailSubscribeModal");
+      var emailUnsubscribeModal = document.getElementById("emailUnsubscribeModal");
+
+      var span = document.getElementsByClassName("close")[0];
+      var emailSubscribeButton = document.getElementById("emailSubscribeButton");
+
+      window.onload = function() {
+        if(!getCookie("newsletter")){
+          emailSubscribeModal.style.display = "block";
+        }
+      }
+      emailSubscribeButton.onclick = function() {
+        emailSubscribeModal.style.display = "block";
+      }
+      
+      span.onclick = function() {
+        emailSubscribeModal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == emailSubscribeModal) {
+          emailSubscribeModal.style.display = "none";
+          emailUnsubscribeModal.style.display = "none";
+        }
+      }
+
+
+      //add new email
+      var emailSubscribe = document.getElementById("emailSubscribe");
+
+      emailSubscribe.addEventListener('submit', async event => {
+        var email = document.getElementById('emailInput').value;
+
+        setCookie("newsletter", email, 30);
+
+        const data = { email };
+
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        };
+        await fetch('/api/email/subscribe', options);
+      });
+      emailSubscribe.onsubmit = function() {
+        emailSubscribeModal.style.display = "none";
+      }
+
+
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+    </script>
   </body>
 </html>

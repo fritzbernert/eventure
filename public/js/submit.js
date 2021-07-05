@@ -1,6 +1,7 @@
 var image64;
 const submitItem = document.getElementById('submitItem');
 const submitCategory = document.getElementById('submitCategory');
+const emailSend = document.getElementById('email');
 
 
 submitItem.addEventListener('click', async event => {
@@ -73,4 +74,22 @@ submitCategory.addEventListener('click', async event => {
     const response = await fetch('/api/category', options);
     const json = await response.json();
     console.log(json);
+});
+
+
+emailSend.addEventListener('click', async event => {
+  var items = document.getElementById('emailItems').value;
+  items = items.split(',');
+  items = [...new Set(items)];
+
+  const data = { items };
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  };
+  await fetch('/api/email/send', options);
 });
