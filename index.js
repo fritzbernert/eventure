@@ -220,7 +220,7 @@ app.get('/item/:id', function(req, res){
         resData = data[0];
 
         if(!resData.link.includes("/redir/")){
-          resData.link = path.join(resData.link);
+          resData.link = 'https://'+resData.link;
         }
 
         res.render("itemPage", 
