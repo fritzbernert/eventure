@@ -188,9 +188,9 @@ app.get('/redir/:id', function(req, res){
 });
 
 //sitemap
-app.get('/sitemap', function(req, res){
+/*app.get('/sitemap', function(req, res){
   res.sendFile(path.join(__dirname+'/sitemap.txt'));
-});
+});*/
 
 //maillist
 app.get('/mailList.txt', function(req, res){
