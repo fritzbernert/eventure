@@ -188,8 +188,8 @@ app.get('/redir/:id', function(req, res){
 });
 
 //sitemap
-app.get('/sitemap.txt', function(req, res){
-  res.sendFile(path.join(__dirname+'/sitemap.txt'));
+app.get('/sitemap.xml', function(req, res){
+  res.sendFile(path.join(__dirname+'/sitemap.xml'));
 });
 
 //maillist
