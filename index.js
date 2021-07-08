@@ -197,9 +197,14 @@ app.get('/mailList.txt', function(req, res){
   res.sendFile(path.join(__dirname+'/mailList.txt'));
 });
 
-//create items/categorys
+//mail unsubscribe
 app.get('/unsubscribe', function(req, res){
   res.sendFile(path.join(__dirname+'/public/page/unsubscribe.html'));
+});
+
+//privacy policy
+app.get('/privacypolicy', function(req, res){
+  res.sendFile(path.join(__dirname+'/public/page/privacyPolicy.html'));
 });
 
 
