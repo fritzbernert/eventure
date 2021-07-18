@@ -124,22 +124,25 @@ veed
 
 
 ADD:
-clickfunnels    -Tools
-elementor
-aweber
-hostgates
-builderall
+clickfunnels                    -Tools
+aweber                          -Tools
+google digital garage           -Tools
+jitter (https://jitter.video)   -Tools-Content Creation
+lumen5                          -Tools-Content Creation
+Snapped4U                       -ecommerce-Content Creation
 
+tchip                           -ecommerce
+zazzle                          -ecommerce
+redbubble                       -ecommerce
+teepublic                       -ecommerce
+societyX                        -ecommerce
+cafepress                       -ecommerce
 
-tchip
-zazzle
-redbubble
-tepublic
-societyX
-cafepress
-
-
-
+swagbucks                       -task
+inboxdollars                    -task
+toluna                          -task
+icon zoomer                     -task
+current.us                      -task
 
 
 
